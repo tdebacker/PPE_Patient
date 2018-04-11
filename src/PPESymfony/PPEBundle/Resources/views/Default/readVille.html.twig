@@ -1,0 +1,18 @@
+{% extends 'PPESymfonyPPEBundle:Default:base.html.twig'%}
+{% block corps %}
+<div id="corps">
+<br/>
+<h3>Les villes</h3>
+<table border>
+<tr><th>Nom de la ville</th></tr>
+{% for ville in lesVilles %}
+	<tr>
+		<td>{{ville.libelle}}</td><td><a href="{{path('ppe_symfony_ppe_updateVille',{id:ville.getId()})}}">Modifier</a></td>
+		<td><a href="{{path('ppe_symfony_ppe_deleteVille',{id:ville.getId()})}}">Supprimer</a></td>
+	</tr>
+{% else %}
+<tr><td>Pas de ville trouvée</td></tr>
+{% endfor %}
+</table>
+</div>
+{% endblock %}

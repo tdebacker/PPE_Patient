@@ -1,0 +1,9 @@
+ppe_symfony_ppe:
+    resource: "@PPESymfonyPPEBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+
+

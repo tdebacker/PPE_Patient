@@ -1,0 +1,21 @@
+{% extends 'PPESymfonyPPEBundle:Default:base.html.twig' %}
+{% block corps %}
+<div id="corps">
+<br/>
+<h3>Liste des Chambres</h3>
+<table border>
+<tr><th>N° de chambre</th><th>Couleur</th><th>Service</th></tr>
+	{% for chambre in lesChambres %}
+		<tr>
+			<td>{{chambre.getId()}}</td>
+			<td>{{chambre.getCouleur()}}</td>
+			<td>{{chambre.getLeservice().getLibelle()}}</td>
+			<td><a href="{{path('ppe_symfony_ppe_modifChambre',{id:chambre.getId()})}}">Modifier</a></td>
+			<td><a href="{{path('ppe_symfony_ppe_supprimerChambre',{id:chambre.getId()})}}">Supprimer</a></td>
+		</tr>
+	{% else %}
+		<tr><td>Pas de séjour trouvé </td></tr>
+	{% endfor %}
+</table>
+</div>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'PPESymfonyPPEBundle:Default:base.html.twig'%}
+{% block corps %} 
+<div id="corps">
+<br/>
+<h3>Les patients</h3>
+<table border>
+<tr><th> Numéro de sécurité sociale</th><th> Nom</th><th> Prenom</th><th> Adresse postale </th><th> E-Mail </th><th> Êtes-vous assuré? </th></tr>
+
+{% for Patient in lesPa %}
+	<tr>
+		<td>{{Patient.getNumSecu()}}</td>
+		<td>{{Patient.getNom()}}</td>
+		<td>{{Patient.getPrenom()}}</td>
+		<td>{{Patient.getAdrNum()}} {{Patient.getAdrRue()}}, {{Patient.getVille().getLibelle()}} </td>
+		<td>{{Patient.getMail()}}</td>
+		<td>
+			{% if Patient.getEstAssuree() == 1%}
+				Oui
+			{% else %}
+				Non
+			{% endif %}
+		</td>
+		<td><a href="{{path('ppe_symfony_ppe_modifpatient',{id:Patient.getId()})}} "> Modifier </a></td>
+		<td><a href="{{path('ppe_symfony_ppe_supppatient',{id:Patient.getId()})}} "> Supprimer </a></td>
+	</tr>
+{% else %}
+<tr><td>Pas de Patient</td></tr>
+{% endfor %}
+</table>
+</div>
+{% endblock %}

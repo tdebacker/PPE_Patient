@@ -1,0 +1,73 @@
+{% extends '::base.html.twig' %}
+{% block body %}
+<link rel="stylesheet" href="{{ asset('bundles/framework/css/sstyle.css') }}" type="text/css" media="all" />
+<h2>HOPITAL</h2>
+<tr>
+<td>
+<div id="menu">
+	<h2> Menu</h2>
+	
+	<table border>
+		<tr>
+			<th>Patient</th>
+		</tr>
+		<tr>
+			<td><a href="{{path('ppe_symfony_ppe_patient',{})}}">Liste des patients</a></td>
+		</tr>
+		<tr>
+			<td><a href="{{path('ppe_symfony_ppe_ajoutpatient',{})}}">Ajout d'un patient</a></td>
+		</tr>
+		
+		
+		<tr>
+			<th>Sejour</th>
+		</tr>
+		<tr>
+			<td><a href="{{path('ppe_symfony_ppe_sejour',{})}}">Liste des sejours</a></td>
+		</tr>
+		<tr>
+			<td><a href="{{path('ppe_symfony_ppe_ajoutSejour',{})}}">Ajout d'un séjour</a></td>
+		</tr>
+		
+		
+		<tr>
+			<th>Ville</th>
+		</tr>
+		<tr>
+			<td><a href="{{path('ppe_symfony_ppe_readVille',{})}}">Liste des villes</a></td>
+		</tr>
+		<tr>
+			<td><a href="{{path('ppe_symfony_ppe_createVille',{})}}">Ajout d'une ville</a></td>
+		</tr>
+		
+		
+		<tr>
+			<th>Service</th>
+		</tr>
+		<tr>
+			<td><a href="{{path('ppe_symfony_ppe_service',{})}}">Liste des services</a></td>
+		</tr>
+		<tr>
+			<td><a href="{{path('ppe_symfony_ppe_ajoutservice',{})}}">Ajout d'un service</a></td>
+		</tr>
+		
+		
+		<tr>
+			<th>Chambre</th>
+		</tr>
+		<tr>
+			<td><a href="{{path('ppe_symfony_ppe_chambre',{})}}">Liste des chambres</a></td>
+		</tr>
+		<tr>
+			<td><a href="{{path('ppe_symfony_ppe_ajoutChambre',{})}}">Ajout d'une chambre</a></td>
+		</tr>
+	</table>
+</div>
+</td>
+<td style="padding: 100px;">
+<div id="corps">
+{% block corps %}{% endblock %}
+</div>
+</td>
+</tr>
+{% endblock %}

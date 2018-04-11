@@ -1,0 +1,37 @@
+{% extends 'PPESymfonyPPEBundle:Default:base.html.twig' %}
+{% block corps %}
+<div id="corps">
+<br/>
+<h3>Liste des sejours</h3>
+<table border>
+<tr><th>Date Arrivée</th><th>Date Départ</th><th>Chambre</th><th>Patient</th><th>Numero Lit</th><th>A t-il débuté le séjour ?</th><th>A t-il terminé son séjour ?</th></tr>
+	{% for sejour in lesSejours %}
+		<tr>
+			<td>{{sejour.getDateDepart|date('Y-m-d')}}</td>
+			<td>{{sejour.getDateFin|date('Y-m-d')}}</td>
+			<td>{{sejour.getLaChambre().getLesInfos()}}</td>
+			<td>{{sejour.getLePatient().getNom()}}</td>
+			<td>{{sejour.getNumLit()}}</td>
+			<td>
+			{% if sejour.getEstEntre() == 1%}
+				Oui
+			{% else %}
+				Non
+			{% endif %}
+			</td>
+			<td>
+			{% if sejour.getEstSortie() == 1%}
+				Oui
+			{% else %}
+				Non
+			{% endif %}
+			</td>
+			<td><a href="{{path('ppe_symfony_ppe_modifSejour',{id:sejour.getId()})}}">Modifier</a></td>
+			<td><a href="{{path('ppe_symfony_ppe_supprimerSejour',{id:sejour.getId()})}}">Supprimer</a></td>
+		</tr>
+	{% else %}
+		<tr><td>Pas de séjour trouvé </td></tr>
+	{% endfor %}
+</table>
+</div>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'PPESymfonyPPEBundle:Default:base.html.twig' %}
+{% block corps %}
+<div id="corps">
+<br/>
+<h3>Liste des services</h3>
+<table border>
+<tr><th>N° de service</th><th>libelle</th></tr>
+	{% for service in lesS %}
+		<tr>
+		<td>{{service.getId()}}</td>
+		<td>{{service.getLibelle()}}</td>
+		<td><a href="{{path('ppe_symfony_ppe_modifservice',{id:service.getId()})}}">Modifier</a></td>
+		<td><a href="{{path('ppe_symfony_ppe_supprimerservice',{id:service.getId()})}}">Supprimer</a></td>
+		</tr>
+	{% else %}
+		<tr><td>Pas de services </td></tr>
+	{% endfor %}
+</table>
+</div>
+{% endblock %}

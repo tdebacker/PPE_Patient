@@ -1,0 +1,9 @@
+{% extends 'PPESymfonyPPEBundle:Default:base.html.twig'%}
+{% block corps %} 
+<div id="corps">
+	<h3>Ajouter un patient</h3>
+	<form action="{{path('ppe_symfony_ppe_ajoutpatient')}}" method ="POST">
+		{{form_widget(form)}}
+	</form>
+<div>
+{% endblock %}

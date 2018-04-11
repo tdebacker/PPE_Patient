@@ -1,0 +1,106 @@
+ppe_symfony_ppe_accueil:
+    path:     /accueil
+    defaults: { _controller: PPESymfonyPPEBundle:Default:index }
+
+ppe_symfony_ppe_createVille:
+    path:     /createVille
+    defaults: { _controller: PPESymfonyPPEBundle:Default:createVille }
+
+ppe_symfony_ppe_updateVille:
+    path:     /updateVille
+    defaults: { _controller: PPESymfonyPPEBundle:Default:updateVille }
+
+ppe_symfony_ppe_deleteVille:
+    path:     /deleteVille
+    defaults: { _controller: PPESymfonyPPEBundle:Default:deleteVille }
+
+ppe_symfony_ppe_readVille:
+    path:     /readVille
+    defaults: { _controller: PPESymfonyPPEBundle:Default:readVille }
+
+ppe_symfony_ppe_patient:
+    path:     /patients
+    defaults: { _controller: PPESymfonyPPEBundle:Default:patient }
+
+ppe_symfony_ppe_modifpatient:
+    path:     /modifpatient
+    defaults: { _controller: PPESymfonyPPEBundle:Default:modificationpatient }
+
+ppe_symfony_ppe_ajoutpatient:
+    path:	/ajoutPatient
+    defaults: { _controller: PPESymfonyPPEBundle:Default:ajoutpatient}
+
+ppe_symfony_ppe_supppatient:
+    path:	/suppPatient
+    defaults: { _controller: PPESymfonyPPEBundle:Default:supppatient}
+
+ppe_symfony_ppe_sejour:
+    path:   /sejour
+    defaults: { _controller: PPESymfonyPPEBundle:Default:sejour }
+
+ppe_symfony_ppe_ajoutSejour:
+    path:   /ajoutSejour
+    defaults: { _controller: PPESymfonyPPEBundle:Default:ajoutSejour }
+
+ppe_symfony_ppe_modifSejour:
+    path:   /modifSejour
+    defaults: { _controller: PPESymfonyPPEBundle:Default:modifSejour }
+
+ppe_symfony_ppe_supprimerSejour:
+    path:   /supprimerSejour
+    defaults: { _controller: PPESymfonyPPEBundle:Default:supprimerSejour }
+
+ppe_symfony_ppe_service:
+    path:     /service
+    defaults: { _controller: PPESymfonyPPEBundle:Default:services }
+
+ppe_symfony_ppe_modifservice:
+    path:     /modifservice
+    defaults: { _controller: PPESymfonyPPEBundle:Default:modificationservice }
+
+ppe_symfony_ppe_ajoutservice:
+    path:     /addservice
+    defaults: { _controller: PPESymfonyPPEBundle:Default:ajouterservice }
+
+ppe_symfony_ppe_supprimerservice:
+    path:     /supprimerservice
+    defaults: { _controller: PPESymfonyPPEBundle:Default:supprimerservice }
+    
+    
+ppe_symfony_ppe_chambre:
+    path:     /chambre
+    defaults: { _controller: PPESymfonyPPEBundle:Default:chambre }
+
+ppe_symfony_ppe_ajoutChambre:
+    path:     /ajoutChambre
+    defaults: { _controller: PPESymfonyPPEBundle:Default:ajoutChambre }
+
+ppe_symfony_ppe_modifChambre:
+    path:     /modifChambre
+    defaults: { _controller: PPESymfonyPPEBundle:Default:modifChambre }
+
+ppe_symfony_ppe_supprimerChambre:
+    path:     /supprimerChambre
+    defaults: { _controller: PPESymfonyPPEBundle:Default:supprimerChambre }
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    

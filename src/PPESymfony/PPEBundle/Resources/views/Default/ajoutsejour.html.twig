@@ -1,0 +1,9 @@
+{% extends 'PPESymfonyPPEBundle:Default:base.html.twig' %}
+{% block corps %}
+	<div id="corps">
+		<h3> Ajout d'un séjour </h3>
+		<form action="{{path('ppe_symfony_ppe_ajoutSejour')}}" method="post">
+			{{form_widget(leFormulaire)}}
+		</form>
+	</div>
+{% endblock %}

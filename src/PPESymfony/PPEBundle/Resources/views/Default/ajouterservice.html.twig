@@ -1,0 +1,9 @@
+{% extends 'PPESymfonyPPEBundle:Default:base.html.twig' %}
+{% block corps %}
+<div id="corps">
+	<h3> Ajout d'un service </h3>
+	<form action="{{path('ppe_symfony_ppe_ajoutservice')}}" method="post">
+		{{form_widget(form)}}
+	</form>
+</div>
+{% endblock %}
